@@ -1,4 +1,32 @@
+@font-face {
+    font-family: 'Roboto main font';
+    src: url('./fonts/RobotoCondensed-Regular.woff2') format('woff2'),
+        url('./fonts/RobotoCondensed-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tokyo Street';
+    src: url('./fonts/TokyoStreetRegular.woff2') format('woff2'),
+        url('./fonts/TokyoStreetRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 /* some cleaning for default stylings */
+
+:root {
+    --span-font-size: 0.9rem;
+    --white-color: rgb(255, 255, 255);
+    --black-color: rgb(0, 0, 0);
+    --opacity-black: rgb(0 0 0 / .6);
+    --font-header: "Tokyo Street";
+    --main-font: "Roboto main font";
+}
 
 html {
     box-sizing: border-box;
@@ -11,8 +39,65 @@ html {
 body {
     margin: 0;
     padding: 0;
+    background-color: var(--black-color);
 }
 
 ul {
     list-style-type: none;
+}
+
+h1 {
+    text-transform: uppercase;
+    color: var(--white-color);
+    font-family: var(--font-header);
+}
+
+span {
+    color: var(--white-color);
+    font-size: var(--span-font-size);
+    font-family: var(--main-font);
+    font-style: italic;
+}
+
+a {
+    color: var(--white-color);
+    text-underline-offset: 1px;
+}
+
+/**main styling*/
+section {
+    display: flex;
+    justify-content: space-between;
+    width: 95vw;
+    margin: auto;
+    background-color: var(--white-color);
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 42vw;
+    background-image: url("./main-tokio.jpg");
+    background-size: cover;
+}
+
+.odin-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 8rem;
+    height: 8rem;
+    background-color: var(--opacity-black);
+}
+
+.tributes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    height: 2rem;
+    background-color: var(--opacity-black);
 }
