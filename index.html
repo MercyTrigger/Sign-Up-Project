@@ -11,10 +11,10 @@
         <div class="left-container">
             <div class="odin-header">
                 <img src="./odin-lined.png" alt="Odin project logo" width="auto" height="125px">
-                <h1>Tokio Night</h1>
+                <h1>The Odin Project</h1>
             </div>
             <div class="tributes">
-                <span>Photo by <a href="https://www.pexels.com/photo/vibrant-tokyo-street-with-modern-architecture-28545401/" target="_blank">Mineia Martins</a> on <a href="https://www.pexels.com/" target="_blank">Pexels</a></span>
+                <span>Photo by <a href="https://www.pexels.com/photo/photo-of-street-during-evening-3536821/" target="_blank">Aleksandar Pasaric</a> on <a href="https://www.pexels.com/" target="_blank">Pexels</a></span>
             </div>
         </div>
         <div class="right-container">
@@ -23,23 +23,44 @@
                     <p>Sign up to explore more of Tokio's beautiful architecture!</p>
                 </div>
                 <div class="form-container">
-                    <fieldset>
-                        <legend>Sign up</legend>
-                        <form action="">
-                            <ul>
-                                <li><label for=""></label><input type="text"></li>
-                                <li><label for=""></label><input type="text"></li>
-                                <li><label for=""></label><input type="text"></li>
-                                <li><label for=""></label><input type="text"></li>
-                                <li><label for=""></label><input type="text"></li>
-                                <li><label for=""></label><input type="text"></li>
-                            </ul>
-                        </form>
-                    </fieldset>
+                    <form action="" id="userData">
+                        <fieldset>
+                            <legend>Fill out</legend>
+                        <ul>
+                            <li>
+                                <label for="firtsName">first name</label>
+                                <input type="text" id="firtsName" name="firstName" placeholder="Mercy">
+                            </li>
+                            <li>
+                                <label for="lastName">last name</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Trigger">
+                            </li>
+                            <li>
+                                <label for="email">email</label>
+                                <input type="email" id="email" name="email" placeholder="mercy@gmail.com">
+                            </li>
+                            <li>
+                                <label for="telNumber">phone number</label>
+                                <input type="tel" id="telNumber" name="tel" placeholder="54443223">
+                            </li>
+                            <li>
+                                <label for="password">password</label>
+                                <input type="password" id="password" name="password" placeholder="should contain one of $#_">
+                            </li>
+                            <li>
+                                <label for="passwordConfirm">confirm password</label>
+                                <input type="password" id="passwordConfirm" name="passwordConfirm" placeholder="should match">
+                            </li>                            
+                        </ul>
+                        </fieldset>
+                    </form>
                 </div>
-                <div class="submit-button"></div>
-                <button></button>
-                <div class="log-in"><span><a href=""></a></span></div>
+                <div class="submit-button-container">
+                    <button type="submit" form="userData">Create Account</button>
+                </div>
+                <div class="log-in">
+                    <span>Already have an account? <a href="#">Log in</a></span>
+                </div>
             </div>
         </div>
     </section>
