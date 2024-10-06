@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <script src="./main.js" defer></script>
     <title>Sign Up</title>
 </head>
 <body>
     <section>
         <div class="left-container">
             <div class="odin-header">
-                <img src="./odin-lined.png" alt="Odin project logo" width="auto" height="125px">
+                <img src="./assets/odin-lined.png" alt="Odin project logo" width="auto" height="125px">
                 <h1>The Odin Project</h1>
             </div>
             <div class="tributes">
@@ -23,7 +24,7 @@
                     <p>Sign up to explore more of Tokio's beautiful architecture!</p>
                 </div>
                 <div class="form-container">
-                    <form action="" id="userData">
+                    <form action="#" id="userData">
                         <fieldset>
                             <legend>Fill out</legend>
                         <ul>
@@ -36,20 +37,33 @@
                                 <input type="text" id="lastName" name="lastName" placeholder="Trigger">
                             </li>
                             <li>
-                                <label for="email">email</label>
-                                <input type="email" id="email" name="email" placeholder="mercy@gmail.com">
+                                <label for="email">email<span aria-label="required">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="mercy@gmail.com" required>
                             </li>
                             <li>
                                 <label for="telNumber">phone number</label>
                                 <input type="tel" id="telNumber" name="tel" placeholder="54443223">
                             </li>
                             <li>
-                                <label for="password">password</label>
-                                <input type="password" id="password" name="password" placeholder="should contain one of $#_">
+                                <label for="password">password<span aria-label="required">*</span></label>
+                                <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                placeholder="should contain one of $#_@*"
+                                pattern="([a-zA-Z0-9]*[$#_@*]{1,})+([a-zA-Z0-9]*)"
+                                required>
+                                <span class="passwords-check">* Passwords do not match</span>
                             </li>
                             <li>
-                                <label for="passwordConfirm">confirm password</label>
-                                <input type="password" id="passwordConfirm" name="passwordConfirm" placeholder="should match">
+                                <label for="passwordConfirm">confirm password<span aria-label="required">*</span></label>
+                                <input 
+                                type="password" 
+                                id="passwordConfirm" 
+                                name="passwordConfirm" 
+                                placeholder="should contain one of $#_@*"
+                                pattern="([a-zA-Z0-9]*[$#_@*]{1,})+([a-zA-Z0-9]*)"
+                                required>
                             </li>                            
                         </ul>
                         </fieldset>
